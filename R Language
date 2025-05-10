@@ -1,0 +1,8 @@
+countries <- c("Nigeria", "India", "Pakistan", "Bangladesh", "Ethiopia")
+stunting_rates <- c(36.8, 34.7, 37.6, 31.2, 37.1)
+stunting_data <- data.frame(Country = countries, Prevalence = stunting_rates)
+
+head(stunting_data)
+
+summary(stunting_data$Prevalence)
+cat("Average stunting rate:", mean(stunting_data$Prevalence), "%\n")
