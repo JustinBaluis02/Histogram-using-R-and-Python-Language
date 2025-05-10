@@ -1,0 +1,16 @@
+barplot(stunting_data$Prevalence, 
+        names.arg = stunting_data$Country,
+        col = "lightblue",
+        main = "Stunting Prevalence by Country",
+        ylab = "Percentage",
+        ylim = c(0, 50))
+
+if (!require("ggplot2")) install.packages("ggplot2")
+library(ggplot2)
+
+ggplot(stunting_data, aes(x = Country, y = Prevalence, fill = Country)) +
+  geom_bar(stat = "identity") +
+  labs(title = "Stunting Rates", 
+       subtitle = "Children under 5",
+       y = "Prevalence (%)") +
+  theme_minimal()
