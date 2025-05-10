@@ -1,0 +1,22 @@
+!pip install pandas matplotlib
+
+import pandas as pd
+import matplotlib.pyplot as plt
+
+stunting_data = pd.DataFrame({
+    'Country': ['Nigeria', 'India', 'Pakistan', 'Bangladesh', 'Ethiopia'],
+    'Prevalence': [36.8, 34.7, 37.6, 31.2, 37.1]
+})
+
+print(stunting_data.head())
+
+plt.hist(stunting_data['Prevalence'],
+         bins=5,  
+         color='lightblue',
+         edgecolor='black')
+
+plt.title('Stunting Prevalence')
+plt.xlabel('Percentage')
+plt.ylabel('Frequency')
+
+plt.show()
